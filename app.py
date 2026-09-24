@@ -32,9 +32,10 @@ with col2:
 if st.button("Prediksi Cluster"):
     # PASTIKAN nama kolom dan urutannya sama persis seperti di notebook saat scaling
     input_data = pd.DataFrame(
-        [[price_val, rating_val]], 
-        columns=['price', 'rating']  # <-- Ganti dengan nama kolom di dataset Anda
-    )
+    [[price_val, rating_val]],
+    columns=['price', 'totalReviews']   
+)
+    
     
     # Standarisasi data input
     scaled_input = scaler.transform(input_data)
